@@ -1,0 +1,31 @@
+@import "tailwindcss";
+
+* {
+  font-family: "Manrope", sans-serif;
+  font-optical-sizing: auto;
+  font-style: normal;
+}
+
+.container {
+  max-width: 1280px;
+  margin: 0 auto;
+  padding: 2rem;
+}
+
+.selected-category {
+  color: #000000;
+  border-color: #000000;
+  font-weight: 700;
+  background-color: #e0e7ff;
+  box-shadow: 0 2px 8px rgba(0, 0, 0, 0.15);
+  transition: all 0.3s ease;
+}
+
+.selected-sort {
+  color: #000000;
+  border-color: #000000;
+  font-weight: 700;
+  background-color: #e0e7ff;
+  box-shadow: 0 2px 8px rgba(0, 0, 0, 0.15);
+  transition: all 0.3s ease;
+}
