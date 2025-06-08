@@ -6,6 +6,7 @@ export default function ExpenseList({
   sortType,
   expensesData,
   setExpensesData,
+  searchText,
 }) {
   const categoryImages = {
     Food: "food.jpg",
@@ -33,8 +34,10 @@ export default function ExpenseList({
         ? true
         : expense.category === selectedCategory
     )
+    .filter((expense) =>
+      expense.title.toLowerCase().includes(searchText.toLowerCase())
+    )
     .sort((a, b) => {
-      console.log("sortType:", a, b);
       if (sortType === "newest") {
         return new Date(b.date) - new Date(a.date);
       } else if (sortType === "oldest") {
@@ -53,7 +56,7 @@ export default function ExpenseList({
   );
 
   return (
-    <div className="w-full flex flex-col gap-8">
+    <div className="w-full flex flex-col gap-8 md:items-stretch items-center">
       {filteredAndSortedExpenses.map((expense) => (
         <Expense
           {...expense}

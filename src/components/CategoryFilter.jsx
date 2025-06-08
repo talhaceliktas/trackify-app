@@ -5,7 +5,7 @@ export default function CategoryFilter({
   setSelectedCategory,
 }) {
   return (
-    <div className="flex gap-2 mt-4 overflow-x-auto whitespace-nowrap scrollbar-hide pb-3">
+    <div className="flex gap-2 mt-4 overflow-x-auto whitespace-nowrap scrollbar-hide pb-3 pt-3">
       {[
         "All",
         "Food",

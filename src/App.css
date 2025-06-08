@@ -29,3 +29,15 @@
   box-shadow: 0 2px 8px rgba(0, 0, 0, 0.15);
   transition: all 0.3s ease;
 }
+
+button {
+  transition: background 1s, box-shadow 1s, transform 1s;
+}
+
+button:hover {
+  background: linear-gradient(0deg, #e6dddd, #bfc1bb);
+  box-shadow: inset 0px 1px 0px 0px rgba(255, 255, 255, 0.4),
+    inset 0px -4px 0px 0px rgba(0, 0, 0, 0.2),
+    0px 0px 0px 4px rgba(255, 255, 255, 0.2), 0px 0px 90px 0px #8b7e94;
+  transform: translateY(-2px);
+}

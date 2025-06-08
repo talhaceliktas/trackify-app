@@ -4,7 +4,7 @@ export default function SortType({ setSortType, sortType }) {
   return (
     <div className="mb-5">
       <h1 className="font-bold mt-12 mb-4">Sort By</h1>
-      <div className="flex gap-3">
+      <div className="flex gap-3 overflow-x-auto scrollbar-hide">
         <button
           className={`cursor-pointer bg-[#E8EDF2] py-1 px-4 rounded-md ${
             sortType === "newest" ? "selected-sort" : ""
@@ -14,7 +14,7 @@ export default function SortType({ setSortType, sortType }) {
           Newest
         </button>
         <button
-          className={`cursor-pointer bg-[#E8EDF2] py-1 px-4 rounded-md ${
+          className={`cursor-pointer bg-[#E8EDF2] py-1 px-4 rounded-md  ${
             sortType === "oldest" ? "selected-sort" : ""
           }`}
           onClick={() => setSortType("oldest")}

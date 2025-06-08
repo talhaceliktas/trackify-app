@@ -13,6 +13,8 @@ export default function MainMenu({
 }) {
   const [selectedCategory, setSelectedCategory] = useState("All");
   const [sortType, setSortType] = useState("newest");
+  const [searchText, setSearchText] = useState("");
+
   return (
     <motion.div
       initial={{ opacity: 0, y: -10 }}
@@ -21,7 +23,7 @@ export default function MainMenu({
     >
       <div className="container mx-auto relative">
         <Header setShowAddExpense={setShowAddExpense} />
-        <SearchInput selectedCategory={selectedCategory} />
+        <SearchInput searchText={searchText} setSearchText={setSearchText} />
         <CategoryFilter
           selectedCategory={selectedCategory}
           setSelectedCategory={setSelectedCategory}
@@ -33,6 +35,7 @@ export default function MainMenu({
           sortType={sortType}
           expensesData={expensesData}
           setExpensesData={setExpensesData}
+          searchText={searchText}
         />
       </div>
     </motion.div>
