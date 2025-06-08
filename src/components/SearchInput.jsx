@@ -1,5 +1,3 @@
-import { div, span } from "framer-motion/client";
-
 export default function SearchInput({ searchText, setSearchText }) {
   return (
     <div className="flex flex-col sm:flex-row items-center sm:items-start mt-10">
